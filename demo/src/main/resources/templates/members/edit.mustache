@@ -1,0 +1,17 @@
+{{>layouts/header}}
+{{#member}}
+<form action="/members/update" method="post" class="container">
+    <input type="hidden" name="memId" value="{{memId}}">
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" name="email" value="{{email}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="text" class="form-control" name="password" value="{{Password}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/members/{{memId}}">Back</a>
+</form>
+{{/member}}
+{{>layouts/footer}}
