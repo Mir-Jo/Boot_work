@@ -1,22 +1,23 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@ToString
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@ToString
 @Getter
-public class Article {
+public class Coffee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
-    private String title;
-    @Column
-    private String content;
+    private String name;
+    private String price;
 }

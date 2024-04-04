@@ -1,9 +1,6 @@
 package com.example.demo.demo1.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,12 +13,10 @@ import lombok.ToString;
 @Getter
 public class Member {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memId;
     @Column
     private String email;
     @Column
     private String password;
-
-    public Long getMemId(){ return memId; }
 }
