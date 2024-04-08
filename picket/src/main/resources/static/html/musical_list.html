@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>뮤지컬</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="#"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <main>
+    <div class="container">
+    <button class="customPrevBtn">&lt;</button>
+    <div class="owl-carousel">
+      <div class="item"><a href="#"><img src="../image/category/musical_mini/2024 뮤지컬 〈광염 소나타〉.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/musical_mini/뮤지컬 [디아길레프].jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/musical_mini/뮤지컬 [디어 에반 핸슨] （Dear Evan Hansen）.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/musical_mini/뮤지컬 〈넥스트 투 노멀〉.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/musical_mini/뮤지컬 〈파가니니〉.jpg"></a></div>
+  </div>
+  <button class="customNextBtn">&gt;</button>
+</div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        
+        owl.owlCarousel({
+            items:3,                 // 한번에 보여줄 아이템 수
+            loop:true,               // 반복여부
+            margin:60,              // 오른쪽 간격
+            autoplay:true,           // 자동재생 여부  
+            autoplayTimeout:5000,
+            autoplayHoverPause:true, //마우스오버시 멈출지 여부
+            center:true
+        });    
+        
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    });
+    </script>
+    <div class="product_list">
+      <h1>작품 목록</h1>
+      <hr>
+      <ul>
+      <li><a href="#"><img src="../image/category/musical/2024 뮤지컬 노트르담 드 파리.jpg"><br><br><span class="product_name">2024 뮤지컬 노트르담 드 파리</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 [낭만별곡].jpg"><br><br><span class="product_name">뮤지컬 [낭만별곡]</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 [디아길레프].jpg"><br><br><span class="product_name">뮤지컬 [디아길레프]</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 [디어 에반 핸슨] （Dear Evan Hansen）.jpg"><br><br><span class="product_name">뮤지컬 [디어 에반 핸슨] <br>（Dear Evan Hansen）</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 〈넥스트 투 노멀〉.jpg"><br><br><span class="product_name">뮤지컬 〈넥스트 투 노멀〉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 〈여기， 피화당〉.jpg"><br><br><span class="product_name">뮤지컬 〈여기， 피화당〉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬 〈파가니니〉.jpg"><br><br><span class="product_name">뮤지컬 〈파가니니〉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/musical/뮤지컬〈더 트라이브 THE TRIBE〉.jpg"><br><br><span class="product_name">뮤지컬〈더 트라이브 THE TRIBE〉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+    </ul>
+    <hr>
+    <div id="list_count">
+    <span id="prev_page">&lt;<a href="#">이전페이지 </a></span><span>| 1 |</span> <span id="next_page"><a href="#">다음페이지&gt;</a></span>
+  </div>
+  </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

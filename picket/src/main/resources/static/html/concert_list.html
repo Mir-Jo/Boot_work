@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>콘서트</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="#"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <main>
+    <div class="container">
+    <button class="customPrevBtn">&lt;</button>
+    <div class="owl-carousel">
+      <div class="item"><a href="#"><img src="../image/category/concert_mini/DAY6 CONCERT〈Welcome to the Show〉.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/concert_mini/HIPHOPPLAYA FESTIVAL 2024.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/concert_mini/King Gnu Asia Tour ‘THE GREATEST UNKNOWN’ in Seoul.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/concert_mini/더글로우2024.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/concert_mini/마음방울채집.jpg"></a></div>
+  </div>
+  <button class="customNextBtn">&gt;</button>
+</div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        
+        owl.owlCarousel({
+            items:3,                 // 한번에 보여줄 아이템 수
+            loop:true,               // 반복여부
+            margin:60,              // 오른쪽 간격
+            autoplay:true,           // 자동재생 여부  
+            autoplayTimeout:5000,
+            autoplayHoverPause:true, //마우스오버시 멈출지 여부
+            center:true
+        });    
+        
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    });
+    </script>
+    <div class="product_list">
+      <h1>작품 목록</h1>
+      <hr>
+      <ul>
+      <li><a href="#"><img src="../image/category/concert/2024 SEASON TEAM 노지훈 in SEOUL.jpg"><br><br><span class="product_name">2024 SEASON TEAM 노지훈 in SEOUL</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/BOBBY ZERO GRAVITY IN SEOUL.jpg"><br><br><span class="product_name">BOBBY ZERO GRAVITY IN SEOUL</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/Boys Like Girls Live in Seoul.jpg"><br><br><span class="product_name">Boys Like Girls Live in Seoul</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/DAY6 CONCERT〈Welcome to the Show〉.jpg"><br><br><span class="product_name">DAY6 CONCERT〈Welcome to the Show〉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/뷰티풀 민트 라이프 2024.jpg"><br><br><span class="product_name">뷰티풀 민트 라이프 2024</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/King Gnu Asia Tour ‘THE GREATEST UNKNOWN’ in Seoul.jpg"><br><br><span class="product_name">King Gnu Asia Tour<br>‘THE GREATEST UNKNOWN’ in Seoul</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/더글로우2024.jpg"><br><br><span class="product_name">더글로우2024</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/concert/HIPHOPPLAYA FESTIVAL 2024.jpg"><br><br><span class="product_name">HIPHOPPLAYA FESTIVAL 2024</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+    </ul>
+    <hr>
+    <div id="list_count">
+    <span id="prev_page">&lt;<a href="#">이전페이지 </a></span><span>| 1 |</span> <span id="next_page"><a href="#">다음페이지&gt;</a></span>
+  </div>
+  </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

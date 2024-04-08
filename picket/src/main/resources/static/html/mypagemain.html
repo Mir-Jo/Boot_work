@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/mypagemaincss.css">
+  <link rel="stylesheet" type="text/css" href="../css/ticketlistcss.css">
+  <link rel="stylesheet" type="text/css" href="../css/wishlistcss.css">
+  <link rel="stylesheet" type="text/css" href="../css/couponcss.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="mypagemain.html"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <main>
+    <div class="mypa">
+      <div class="mypageplace">
+        <div class="mypageimgtext">
+          
+          <div>
+            <div class="usernicknamebox">
+              <div class="scroll1" id="scroll1">
+              <span class="usernickname">최부용</span>님<br>어서오세요
+              <br>
+              </div>
+              
+            </div>
+            
+          </div>
+         
+        </div>
+        <div class="mypagelist">
+          <div class="mypagelist_right_border">예매내역<br><span><a href="#scroll2">1</a><span class="mypagelist_count">건</span></span></div>
+          <div class="mypagelist_right_border">찜목록<br><span><a href="#scroll3">1</a><span class="mypagelist_count">건</span></span></div>
+          <div class="mypagelist_right_border">포인트<br><span><a href="#scroll4">1</a><span class="mypagelist_count">건</span></span></div>
+          <div class="mypagelist_last_right_border">문의내역<br><span><a href="#scroll5">1</a><span class="mypagelist_count">건</span></span></div>
+        </div>
+        <div class="mypagekind">
+         
+        </div>
+      </div>
+    </div>
+    <form>    
+    </div>
+
+    <div class="underline"></div>
+
+    <!--<div class="listbox">-->
+      <div class="scroll2" id="scroll2"><div class="ticketlist_titlename"><h2>예매내역</h2></div></div>
+    <form>
+    <div class="ticketlist_asta">
+      <div class="ticketlist_menu">
+       
+        <input type="checkbox" id="ticketlist_expand-menu" name="ticketlist_expand-menu">
+        <ul class="list">
+          <li><a href="#scroll1" class="ticketlist_item"><div>메뉴</div></a></li>
+            <li><a href="#scroll2" class="ticketlist_item"><div>예매내역</div></a></li>
+            <li><a href="#scroll3" class="ticketlist_item"><div>찜목록</div></a></li>
+            <li><a href="#scroll4" class="ticketlist_item"><div>포인트</div></a></li>
+            <li><a href="profile.html" class="ticketlist_item"><div>회원정보</div></a></li>
+            <li><a href="#" class="ticketlist_item"><div>문의내역</div></a></li>
+        </ul>
+      </div>
+      
+      <div class="ticketlist_listmain">
+        
+        <table>
+          <thead>
+            <tr class="ticketlist_select_tr">
+              <th colspan="2"class="ticketlist_select_th">
+                <div>카테고리 :
+                  <select>
+                    <option>콘서트</option>
+                    <option>뮤지컬</option>
+                    <option>연극</option>
+                    <option>전시</option>
+                    <option>클래식</option>
+                  </select>
+                </div>
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr class="ticketlist_tablehead">
+              <th class="ticketlist_checkbox_width"><input type="checkbox" name="ticketlist_ticket"></th>
+              <th>예매 일자</th>
+              <th>티켓 목록</th>
+              <th>공연 일자</th>
+             
+              <th>개수</th>
+              <th>가격</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ticketlist_tablebody">
+              <td><input type="checkbox" name="ticketlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>2024-04-01</td>
+              <td>1</td>
+              <td>140000</td>
+            </tr>
+            <tr class="ticketlist_tablebody">
+              <td><input type="checkbox" name="ticketlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>2024-04-01</td>
+              <td>1</td>
+              <td>140000</td>
+            </tr>
+            <tr class="ticketlist_tablebody">
+              <td><input type="checkbox" name="ticketlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>2024-04-01</td>
+              <td>1</td>
+              <td>140000</td>
+            </tr>
+            <tr class="ticketlist_tablebody">
+              <td><input type="checkbox" name="ticketlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>2024-04-01</td>
+              <td>1</td>
+             
+              <td>140000</td>
+            </tr>
+            <tr class="ticketlist_tablebody">
+              <td><input type="checkbox" name="ticketlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>2024-04-01</td>
+              <td>1</td>
+              <td>140000</td>
+            </tr>
+            <tr>
+              <td class="ticketlist_spacetable" colspan="6">
+                <button class="ticketlist_pageleft">&lt</button>
+                <input class="ticketlist_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                <button class="ticketlist_pageright">&gt</button>
+              </td>
+              
+            </tr>
+            
+            <tr>
+              <td class="ticketlist_tablebutton" colspan="6">
+                
+                <button class="ticketlist_buttons">환불하기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    </form>
+    <div class="underline"></div>
+    <!--<div class="listbox">-->
+    <div class="scroll3" id="scroll3"><div class="wishlist_titlename"><h2>찜목록</h2></div></div></div>
+    <form>
+    <div class="wishlist_asta">
+      
+      
+      <div class="wishlist_listmain">
+        
+        <table>
+          <thead>
+            <tr class="wishlist_select_tr">
+              <th colspan="2"class="wishlist_select_th">
+                <div>카테고리 :
+                  <select>
+                    <option>콘서트</option>
+                    <option>뮤지컬</option>
+                    <option>연극</option>
+                    <option>전시</option>
+                    <option>클래식</option>
+                  </select>
+                </div>
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr class="wishlist_tablehead">
+              <th class="wishlist_checkbox_width"><input type="checkbox" name="wishlist_ticket"></th>
+              <th>공연 일자</th>
+              <th>티켓목록</th>
+              <th>카테고리</th>
+             
+              <th>가격</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="wishlist_tablebody">
+              <td><input type="checkbox" name="wishlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>뮤지컬</td>
+            
+              <td>40000</td>
+            </tr>
+            <tr class="wishlist_tablebody">
+              <td><input type="checkbox" name="wishlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>뮤지컬</td>
+             
+              <td>40000</td>
+            </tr>
+            <tr class="wishlist_tablebody">
+              <td><input type="checkbox" name="wishlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>뮤지컬</td>
+             
+              <td>40000</td>
+            </tr>
+            <tr class="wishlist_tablebody">
+              <td><input type="checkbox" name="wishlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>뮤지컬</td>
+             
+              <td>40000</td>
+            </tr>
+            <tr class="wishlist_tablebody">
+              <td><input type="checkbox" name="wishlist_ticket"></td>
+              <td>2024-03-26</td>
+              <td>뮤지컬 물랑루즈</td>
+              <td>뮤지컬</td>
+             
+              <td>40000</td>
+            </tr>
+            <tr>
+              <td class="wishlist_spacetable" colspan="6">
+                <button class="wishlist_pageleft">&lt</button>
+                <input class="wishlist_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                <button class="wishlist_pageright">&gt</button>
+              </td>
+              
+            </tr>
+            
+            <tr>
+              <td class="wishlist_tablebutton" colspan="6">
+                
+                <button class="wishlist_buttons">취소하기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    </form>
+    
+    <div class="scroll4" id="scroll4"><div class="coupon_titlename"><h2>포인트</h2></div></div>
+    <form>
+    <div class="coupon_asta">
+      <div class="coupon_menu">
+        <label for="coupon_expand-menu"><div>메뉴</div></label>
+        <input type="checkbox" id="coupon_expand-menu" name="coupon_expand-menu">
+        <ul>
+            <li><a href="ticketlist.html" class="coupon_item"><div>예매내역</div></a></li>
+            <li><a href="wishlist.html" class="coupon_item"><div>찜목록</div></a></li>
+            <li><a href="coupon.html" class="coupon_item"><div>포인트내역</div></a></li>
+            <li><a href="profile.html" class="coupon_item"><div>회원정보</div></a></li>
+            <li><a href="#" class="coupon_item"><div>문의내역</div></a></li>
+        </ul>
+      </div>
+      
+      <div class="coupon_listmain">
+        
+        <table>
+          <thead>
+            
+            <tr class="coupon_tablehead">
+              
+              <th>포인트명</th>
+              <th>포인트</th>
+              <th>사용기간</th>
+             
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="coupon_tablebody">
+              
+              <td>신규회원</td>
+              <td>50000</td>
+              <td>2024-04-01 ~ 2024-04-01</td>
+            
+            </tr>
+            <tr class="coupon_tablebody">
+              
+              <td>신규회원</td>
+              <td>50000</td>
+              <td>2024-04-01 ~ 2024-04-01</td>
+           
+            </tr>
+            <tr class="coupon_tablebody">
+              
+              <td>신규회원</td>
+              <td>50000</td>
+              <td>2024-04-01 ~ 2024-04-01</td>
+           
+            </tr>
+            <tr class="coupon_tablebody">
+             
+              <td>신규회원</td>
+              <td>50000</td>
+              <td>2024-04-01 ~ 2024-04-01</td>
+             
+            </tr>
+            <tr class="coupon_tablebody">
+              
+              <td>신규회원</td>
+              <td>50000</td>
+              <td>2024-04-01 ~ 2024-04-01</td>
+            
+            </tr>
+            <tr>
+              <td class="coupon_spacetable" colspan="6">
+                <button class="coupon_pageleft">&lt</button>
+                <input class="coupon_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                <button class="coupon_pageright">&gt</button>
+              </td>
+              
+            </tr>
+            
+            <tr>
+              <td class="coupon_tablebutton" colspan="6">
+                
+                <button class="coupon_buttons">환불하기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    </form>
+    </div>
+    </div>
+    </form>
+  </main>
+ 
+  <footer>
+    <div class="footer-side">
+      <div id="foot-top"> <a href="#" >이용약관 </a><a href="#">단체 문의</a><a href="#" >공연 등록 문의</a><a href="#" >개인정보처리방침</a><a href="#" >청소년보호정책</a>
+      </div>
+      <div id="footer-left">
+        <span> <h4>고객센터 1600-1588(유료)</h4></span>
+        <span> <h4>이메일 picket@ezn.co.kr</h4></span><br>
+        <span> 평일(월~금) 10:00 ~ 17:30</span><br>
+        <span> 주말 및 공휴일 휴무</span>
+      </div>
+    
+      <img src="../image/icon/피켓로고검정.png" width="10%">
+      <div>
+        <span>대표자 TeamProject |</span><span> 서울 강남구 풍성로 62길 대우빌딩</span> <span>| 사업자 등록번호 154-15-11562</span ><span>| 통신판매업신고 : 제2024-0001호</span><br>
+        <span>호스팅서비스사업자 : Picket(주) </span><span>&copy;PicketCorp.Allright Reserved</span>
+      </div>
+    </div>
+</footer>
+</body>
+</html>

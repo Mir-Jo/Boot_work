@@ -1,0 +1,264 @@
+*{padding:0;margin:0}
+  ul,ol{list-style:none}
+  a{text-decoration:none;color:#fff;}
+  nav{width:80%;overflow:hidden;height:80px;background-color:#000000;margin:0px auto}
+  #nav1 {
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .top-main-bg{
+    background-color:#000000;
+  }
+
+
+  #nav1_text{
+    font-size:15px;
+  }
+  #nav1>a {
+    line-height: 70px;
+    display: block;
+    font-weight: 900;
+    position: absolute;
+    left: 30px;
+  }
+  #search {
+    padding: 0 20px;
+    height: 30px;
+    background-color: #000000;
+    color: #fff;
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-15px);   
+  }
+  #searchicon{
+    position:absolute;
+    top:30%;
+    right:16%;
+  }
+  #mypage{
+    padding: 0 20px;
+    height: 30px;
+    background-color: #000000;
+    color: #fff;
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-15px);  
+  }
+  #login{
+    padding: 0 20px;
+    height: 30px;
+    background-color: #000000;
+    color: #fff;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-15px);
+  }
+  #nav1 > a > img{
+    width:200px;
+    height:90px;
+  }
+  #nav1>ul {
+    display: inline-block;
+  }
+  #nav1>ul li {
+    float: left;
+    line-height: 80px;
+    padding: 0 30px;
+  }
+  #nav2{
+    float:left;
+  }
+
+
+/* 
+main{
+  margin-bottom:20%;
+} */
+
+.mypagemain_titlename h2{
+  margin:3% 35% 1%;
+  padding:2% 0;
+  text-align:center;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
+}
+.underline{
+  width:59%;
+  margin:auto;
+  margin-top:65px;
+  margin-bottom:100px;
+  border:3px solid rgb(129, 131, 224);
+}
+.mypagemain_asta{
+  display:flex;
+  justify-content: space-between;
+}
+
+/* 사이드바 */
+  .mypagemain_menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+  }
+ 
+  #mypagemain_expand-menu { /* 체크박스 폼 요소 감춤 */
+    display: none;
+  }
+  #mypagemain_expand-menu:checked ~ ul { /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+    display: block;
+    height: auto;
+  }
+  .mypagemain_menu {
+    display: block;
+    width:150px;
+    background-color: #000;
+    color: #fff;  
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    margin-top:0%;
+    margin-bottom:50%;
+    padding: 0%;
+    box-sizing: border-box;
+    position:fixed;
+  }
+  .mypagemain_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mypagemain_menu a, .mypagemain_menu > label {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+  }
+  .mypagemain_menu ul li:hover, .mypagemain_menu > label:hover, .mypagemain_menu a:hover {
+    color: #5a4949;
+  
+  }
+  
+  .mypagemain_menu div {
+    left: 50px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding:0 0 0 20px;
+     /* 패딩 20p로 축소 */
+  }
+  .mypa{
+    display:flex;
+    justify-content: center;
+  }
+  .mypageplace{
+    background-color:rgb(129, 131, 224);
+    width:60%;
+    height:250px;
+    display:flex;
+    font-size:35px;
+    justify-content: space-between;
+  }
+  .mypageimgtext{
+    display:flex;
+    padding-left:50px;
+    
+    align-items: center;
+    width:30%;
+  }
+  #userimage{
+    background-color:rgb(87, 118, 153);
+    width:80%;
+    
+  }
+  .mypagelist{
+    display:flex;
+    font-size:25px;
+    align-items:center;
+  }
+  .mypagelist_right_border{
+    border-right:2px solid #ffffff;
+    text-align:center;
+    padding:0px 15px;
+  }
+  .mypagelist_last_right_border{
+    text-align:center;
+    padding:0px 20px;
+  }
+  .mypagelist_count{
+    font-size:15px;
+  }
+  #userimage > img{
+    border-radius: 50%;
+    width:80%;
+    
+  }
+  .usernicknamebox{
+    width:300px;
+    
+  }
+  .usernickname{
+    font-size:50px;
+  }
+  .mypagekind{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+
+
+
+  /* 푸터 */
+  footer{
+  
+    background-color:#9e9c9c;
+    
+  }
+  
+  .footercontainer1{
+    display:flex;
+  }
+  #topc1{
+    justify-content: flex-start;
+  }
+  .rlxk{
+    margin:20px 15px;
+    
+  }
+  .footerLogo{
+    display:flex;
+  }
+  .footerLogo > img{
+    width:11%;
+    height:100%;
+    
+  }
+  .Logotext{
+    padding:15px 0 0 20px;
+  
+    
+  }
+  .footercontainer2{
+    display:flex;
+  }
+  .footercontainer2 > div{
+    margin:10px 5px;
+  }
+  #fc2first{
+    padding-left:10px;
+  }
+  #topc2{
+    justify-content: flex-start;
+  }
+
+
+
+  

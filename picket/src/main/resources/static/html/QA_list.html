@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/QA_list.css">
+  <title>내 문의내역</title>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="#"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="#"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <h1 id="List_title">내 문의내역</h1>
+  <form id="QA_query">
+  <select id="QA_type">
+    <option id="전체" name="전체">전체</option>
+    <option id="type" name="type">유형</option>
+    <option id="title" name="title">제목</option>
+    <option id="status" name="status">상태</option>
+  </select>
+    <input type="text" name="QA_search" id="QA_search">
+    <button id="submit" name="submit" method="post">검색</button>
+  </form>
+  <table id="my_QAlist" cellspacing="0">
+    <tr>
+      <th>번호</th>
+      <th>문의유형</th>
+      <th>문의제목</th>
+      <th>등록일</th>
+      <th>상태</th>
+    </tr>
+    <tr>
+      <td><a href="#">1</a></td>
+      <td>유형1</td>
+      <td><a href="#">제목1</a></td>
+      <td>xx-xx-xx</td>
+      <td>답변완료</td>
+    </tr>
+    <tr>
+      <td><a href="#">2</a></td>
+      <td>유형2</td>
+      <td><a href="#">제목2</a></td>
+      <td>xx-xx-xx</td>
+      <td>답변완료</td>
+    </tr>
+    <tr>
+      <td><a href="#">3</a></td>
+      <td>유형3</td>
+      <td><a href="#">제목3</a></td>
+      <td>xx-xx-xx</td>
+      <td>답변완료</td>
+    </tr>
+    <tr>
+      <td><a href="#">4</a></td>
+      <td>유형4</td>
+      <td><a href="#">제목4</a></td>
+      <td>xx-xx-xx</td>
+      <td>접수</td>
+    </tr>
+    <tr>
+      <td><a href="#">5</a></td>
+      <td>유형5</td>
+      <td><a href="#">제목5</a></td>
+      <td>xx-xx-xx</td>
+      <td>접수</td>
+    </tr>
+  </table>
+  <div class="page_select">
+  <a href="#">&lt;</a> |1| <a href="#">&gt;</a>
+</div>
+</body>
+</html>

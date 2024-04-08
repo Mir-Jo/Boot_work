@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>클래식</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="#"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <main>
+    <div class="container">
+    <button class="customPrevBtn">&lt;</button>
+    <div class="owl-carousel">
+      <div class="item"><a href="#"><img src="../image/category/classic_mini/유키구라모토 내한 25주년 기념.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/classic_mini/일무.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/classic_mini/지브리&히사이시조 디오케스트라-부천.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/classic_mini/해리포터와 불사조기사단 인 콘서트.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/classic_mini/정명훈&도쿄필하모닉.jpg"></a></div>
+  </div>
+  <button class="customNextBtn">&gt;</button>
+</div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        
+        owl.owlCarousel({
+            items:3,                 // 한번에 보여줄 아이템 수
+            loop:true,               // 반복여부
+            margin:60,              // 오른쪽 간격
+            autoplay:true,           // 자동재생 여부  
+            autoplayTimeout:5000,
+            autoplayHoverPause:true, //마우스오버시 멈출지 여부
+            center:true
+        });    
+        
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    });
+    </script>
+    <div class="product_list">
+      <h1>작품 목록</h1>
+      <hr>
+      <ul>
+      <li><a href="#"><img src="../image/category/classic/라 트라비아타.jpg"><br><br><span class="product_name">라 트라비아타</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/막심 벤게로프 바이올린 리사이틀.jpg"><br><br><span class="product_name">막심 벤게로프 바이올린 리사이틀</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/백조의 호수.jpg"><br><br><span class="product_name">백조의 호수</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/존 윌리엄스 시네마 콘서트.jpg"><br><br><span class="product_name">존 윌리엄스 시네마 콘서트</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/한여름 밤의 꿈.jpg"><br><br><span class="product_name">한여름밤의 꿈</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/클래식 디깅 클럽 - 드뷔시.jpg"><br><br><span class="product_name">클래식 디깅 클럽 - 드뷔시</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/지브리&히사이시조 디오케스트라-부천.jpg"><br><br><span class="product_name">지브리&히사이시조 디오케스트라-부천</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/classic/정명훈&도쿄필하모닉.jpg"><br><br><span class="product_name">정명훈&도쿄필하모닉</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+    </ul>
+    <hr>
+    <div id="list_count">
+    <span id="prev_page">&lt;<a href="#">이전페이지 </a></span><span>| 1 |</span> <span id="next_page"><a href="#">다음페이지&gt;</a></span>
+  </div>
+  </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

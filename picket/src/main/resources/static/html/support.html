@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/support.css">
+<link rel="stylesheet" href="../css/common.css">
+  <title>고객센터</title>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="mypagemain.html"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <div class="Wrap">
+    <main>
+      <!--측면 네비게이션바-->
+      <aside>
+      <nav id="left_sidebar">
+        <h3>홈>고객센터</h3>
+        <h4>FAQ</h4>
+        <ul>
+          <hr>
+          <li><a href="#">유형1</a></li><hr>
+          <li><a href="#">유형2</a></li><hr>
+          <li><a href="#">유형3</a></li><hr>
+          <li><a href="#">유형4</a></li><hr>
+          <li><a href="#">유형5</a></li>
+        </ul>
+      </nav>
+        <h5 id="PN">문의전화<br>02)XXX-XXXX</h5>
+        <div id="one"><h6><a href="QA_write.html">1:1문의</a></h6></div>
+      </aside>
+      <!--FAQ검색창-->
+<h2 id="FAQ_head">자주 묻는 질문</h2>
+      <table id="faq_box" cellpadding="0" bordercolor="black" cellspacing="0">
+        <tr>
+          <td id="faq_searchHead" rowspan="2" colspan="2">FAQ 검색</td>
+          <td>
+            <form id="faq_select">
+            <select id="faq_selector">
+              <option value="all">전체</option>
+              <option value="type">유형</option>
+              <option value="title">제목</option>
+          </select>
+        </form>
+      </td>
+      <td colspan="5" width="200px"><input type="text" id="faq_searchBox"></td>
+          <td width="45px"><button id="faq_searchButton">검색</button></td>
+        </tr>
+        <tr>
+          <td colspan="7" id="announcement">&nbsp;* 찾으시는 답변이 없으면 1:1문의를 이용해주세요.</td>
+        </tr>
+      </table>
+      <!--FAQ 메인박스-->
+      <table id="faq" cellpadding="0" cellspacing="0"> 
+        <tr>
+          <th width="30%">유형</th>
+          <th class="table_second">제목</th>
+        </tr>
+        <tr>
+          <td><a href="#">유형1</a></td>
+          <td class="table_second"><a href="#">제목1</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">유형2</a></td>
+          <td class="table_second"><a href="#">제목2</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">유형3</a></td>
+          <td class="table_second"><a href="#">제목3</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">유형4</a></td>
+          <td class="table_second"><a href="#">제목4</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">유형5</a></td>
+          <td class="table_second"><a href="#">제목5</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">유형6</a></td>
+          <td class="table_second"><a href="#">제목6</a></td>
+        </tr>
+      </table>
+      <p id="more"><a href="#">&lt;</a><a href="#">&lt;&lt;</a><a href>1</a>|<a href="#">2</a>|<a href>3</a>|<a href="#">4</a>|<a href>5</a>|<a href="#">6</a>|<a href>7</a>|<a href="#">8</a>|<a href="#">9</a> <a href="#">&gt;</a> <a href="#">&gt;&gt;</a></p>
+    </main>
+  </div>
+</body>
+</html>

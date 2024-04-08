@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>전시</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav1">
+      <a href="main.html"><img id="logo" src="../image/icon/로고.png" width="55%" ></a>
+      <ul>
+        <li><a href="concert_list.html">콘서트</a></li>
+        <li><a href="musical_list.html">뮤지컬</a></li>
+        <li><a href="act_list.html">연극</a></li>
+        <li><a href="classic_list.html">클래식</a></li>
+        <li><a href="exhibit_list.html">전시회</a></li>
+      </ul>
+
+    </nav>
+    <div>
+      <a href="#"><img id="my" src="../image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
+      <a href="support.html"><img id="callcenter" src="../image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
+      <a href="login.html"><img id="login" src="../image/icon/로그인.png" width="45"></a>
+      
+    </div>
+  </header>
+  <main>
+    <div class="container">
+    <button class="customPrevBtn">&lt;</button>
+    <div class="owl-carousel">
+      <div class="item"><a href="#"><img src="../image/category/exhibit_mini/그래피티 연금술사，시릴 콩고 Cyril Kongo´s.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/exhibit_mini/리얼뱅크시 REAL BANKSY.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/exhibit_mini/서울바앤스피릿쇼 2024.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/exhibit_mini/새벽부터 황혼까지 - 스웨덴 국립미술관 컬렉션.jpg"></a></div>
+      <div class="item"><a href="#"><img src="../image/category/exhibit_mini/THE GREAT UNITY.jpg"></a></div>
+  </div>
+  <button class="customNextBtn">&gt;</button>
+</div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        
+        owl.owlCarousel({
+            items:3,                 // 한번에 보여줄 아이템 수
+            loop:true,               // 반복여부
+            margin:60,              // 오른쪽 간격
+            autoplay:true,           // 자동재생 여부  
+            autoplayTimeout:5000,
+            autoplayHoverPause:true, //마우스오버시 멈출지 여부
+            center:true
+        });    
+        
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    });
+    </script>
+    <div class="product_list">
+      <h1>작품 목록</h1>
+      <hr>
+      <ul>
+      <li><a href="#"><img src="../image/category/exhibit/1미터 마술 체험.jpg"><br><br><span class="product_name">1미터 마술 체험</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/[얼리버드] 스튜디오 지브리 애니메이션의 거장 타카하타 이사오전.jpg"><br><br><span class="product_name">[얼리버드] 스튜디오 지브리<br>애니메이션의 거장 타카하타 이사오전</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/그래피티 연금술사，시릴 콩고 Cyril Kongo´s.jpg"><br><br><span class="product_name">그래피티 연금술사<br>시릴 콩고 Cyril Kongo´s</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/서울바앤스피릿쇼 2024.jpg"><br><br><span class="product_name">서울바앤스피릿쇼 2024</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/후지시로 세이지 탄생 100주년 기념-오사카 파노라마展.jpg"><br><br><span class="product_name">후지시로 세이지 탄생<br>100주년 기념<br>오사카 파노라마展</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/새벽부터 황혼까지 - 스웨덴 국립미술관 컬렉션.jpg"><br><br><span class="product_name">새벽부터 황혼까지<br>스웨덴 국립미술관 컬렉션</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/스투파의 숲， 신비로운 인도 이야기.jpg"><br><br><span class="product_name">스투파의 숲，신비로운 인도 이야기</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+      <li><a href="#"><img src="../image/category/exhibit/THE GREAT UNITY.jpg"><br><br><span class="product_name">THE GREAT UNITY</span><br><span class="product_date">20xx.xx.xx~20xx.xx.xx</span></a></li>
+    </ul>
+    <hr>
+    <div id="list_count">
+    <span id="prev_page">&lt;<a href="#">이전페이지 </a></span><span>| 1 |</span> <span id="next_page"><a href="#">다음페이지&gt;</a></span>
+  </div>
+  </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
