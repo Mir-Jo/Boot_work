@@ -21,16 +21,15 @@ public class CustomerController {
 
     /* 회원가입 정보를 전달*/
     @PostMapping("/signup")
-    public String createUser(CustomerForm form, RedirectAttributes rttr){
+    public String createUser(CustomerForm form){
 //        log.info(form.toString());
         Customer customer = form.toEntity();
 //        log.info(customer.toString());
         Customer saved = customerRepository.save(customer);
-        if( saved.toString() != null) {
-        rttr.addFlashAttribute("message","가입이 완료되었습니다.");
+        if( saved != null) {
         return "/login-after-sign";
+        }else{
+        return null;
         }
-        rttr.addFlashAttribute("message","잘못된 요청입니다. 다시 입력해주십시오.");
-        return "/loginpage";
     }
 }

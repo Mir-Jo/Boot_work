@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Slf4j
 @Controller
@@ -44,7 +45,10 @@ public class PicketMainController {
 
     /* 회원가입 후에 로그인창으로 이동 */
     @PostMapping("/login-after-sign")
-    public String signupMainAfterSign() { return "redirect:/loginpage";}
+    public String signupMainAfterSign(RedirectAttributes rttr) {
+        rttr.addFlashAttribute("message", "가입이 완료되었습니다.");
+        return "redirect:/loginpage";
+    }
 
     /* 카테고리별 작품목록으로 이동 */
     @GetMapping("/concertlist")
