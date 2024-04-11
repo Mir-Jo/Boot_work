@@ -13,9 +13,6 @@ import lombok.ToString;
 @Getter
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long uid;
-    @Column
     private String id;
     @Column
     private String pass;

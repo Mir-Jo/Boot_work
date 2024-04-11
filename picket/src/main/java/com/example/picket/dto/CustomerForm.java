@@ -2,12 +2,13 @@ package com.example.picket.dto;
 
 import com.example.picket.entity.Customer;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.ToString;
 
+@Getter
 @AllArgsConstructor
 @ToString
 public class CustomerForm {
-    private Long uid;
     private String id;
     private String pass;
     private String email;
@@ -20,6 +21,6 @@ public class CustomerForm {
 
 
     public Customer toEntity(){
-        return new Customer(uid, id, pass, email, name, birthdate, tel, card, balance, point);
+        return new Customer(id, pass, email, name, birthdate, tel, card, 1000000L, 0L);
     }
 }

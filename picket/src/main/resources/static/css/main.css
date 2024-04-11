@@ -3,68 +3,9 @@ html{
   height: 100%; 
 }
 *{padding:0;margin:0}
+
+
 main{ background-color: #000000; 
-}
-
-
-/* 메인 홈 페이지 헤더 */
-ul,ol{list-style:none}
-a{text-decoration:none;color:#fff;font-size:20px}
-nav{width:100%;overflow:hidden;height:70px;background-color:#000000; }
-#nav1 {
-  width: 100%;
-  position: relative ;
-  display:  flex;
-  justify-content: center;
-}
-
-#nav1>a {
-  display: block; 
-  font-size: 50px ;
-  position: absolute;
-  left: 10px;
-} 
-#my{ 
-  position:absolute;
-  top: 10px;    
-  right: 7%;}
-
-/* #logo{
-  top: 12px;
-  left: 20px
-} */
-#login{
-  position:absolute;
-  top: 10px;    
-  right: 10%;
-}
-
-/* 고객센터 */
-#callcenter{ position:absolute; 
-    top: 14px;    
-    right: 4.5%;}     
-
-#nav1>ul {
-  display: inline-block;
-}
-#nav1>ul li {
-  font-family: 'wind';
-  font-weight: 500;
-  float: left;
-  line-height: 60px;
-  padding: 0 30px;
-}
-
-/* 검색창 테이블 */
-nav>input{
-  border: 0;
-  padding: 0 20px; 
-  height: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  position: absolute;
-  right: 9.5%;
-  top: 30%;
 }
 
 /* 비디오 카테고리 연결 */
@@ -78,24 +19,25 @@ nav>input{
 
 #indexf{
   position: relative;
-  height: 1500px;
+  height: 1200px;
   width: 100%;
   z-index: 1;
- 
 }
 
 /* 카테고리 목록 */
 .text1{
+  font-family: 'wind';
+  font-weight: 500;
   display:flex;  /* 플렉스 컨테이너 지정 */
-  padding:20px;
+  padding:10% 0 0 0;
   margin-bottom:30px;
   color:#fff;
-  font-size:20px;
+  font-size:30px;
   justify-content: center;   
 }
 .iconbox{
   display:flex;  /* 플렉스 컨테이너 지정 */
-  padding: 5% 20%;
+  padding: 3% 20%;
   color:#fff;
   font-size:25px;
   justify-content: space-around;
@@ -107,6 +49,8 @@ nav>input{
   text-align:center;
 }
 #icontext{
+  font-family: 'wind';
+  font-weight: 500;
   text-align:center;
   
 }
@@ -116,7 +60,6 @@ nav>input{
   position:relative;
   width:1920px auto;
   height:700px ;
-  /* border:2px solid #ccc; */
   display: flex;
   justify-content: space-between;
   background-repeat: no-repeat;
@@ -259,7 +202,7 @@ animation: rollingleft2 100s linear infinite;
 /* FAQ */
 
 .FAQ{
-  font-family: 'sdgothic';
+  font-family: 'wind';
   font-weight: 500;
   background-color: #ffffff;
   padding-bottom: 10%;
@@ -355,4 +298,40 @@ width: 50%;
 
 .image-wrap img, .image-wrap2 img{
   border-radius: 20px;
+}
+
+
+
+/*테스트*/
+.test{
+  position: relative; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.blank{
+  height: 100vh;
+  width: 100vw;
+}
+
+header{
+  z-index: 100; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+video{
+  transition: all 0.1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }

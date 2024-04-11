@@ -18,7 +18,7 @@
     <div class="container" id="container">
         <!-- 회원가입 창 -->
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="/findPass" method="post">
                 <h1>비밀번호 조회</h1>
                 <!-- <div class="social-container" 회원 가입시 간편 로그인 넣을지 말지>
                   <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -37,7 +37,7 @@
         </div>
         <!-- 로그인 창 -->
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="/findId" method="post">
                 <h1>아이디 조회</h1><br>
                 <!-- <div class="social-container">
                   <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -45,10 +45,11 @@
                   <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div> -->
                 <span>찾으시는 아이디의 정보를 입력해주세요</span>
-                <input type="email" placeholder="이메일">
-                <input type="text" placeholder="이름">
+                <input type="text" name="name" placeholder="이름">
+                <input type="text" name="tel" placeholder="전화번호"
+                       pattern="^01[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}$" required/>
                 <a href="/loginpage">로그인 하시겠어요?</a>
-                <button id="button1">조 회</button>
+                <button id="button1" type="submit">조 회</button>
             </form>
         </div>
         <!-- 회원가입 창 레드 레이어 -->
@@ -69,9 +70,22 @@
             </div>
         </div>
     </div>
-
 </main>
 <script src="/js/FindIDPW.js">
+</script>
+<script>
+    const button1 = document.getElementById("button1");
+    window.onload = function() {
+        var foundId = "{{#foundId}}{{foundId}}{{/foundId}}";
+        var message = "{{#findIdError}}{{findIdError}}{{/findIdError}}";
+        if (foundId) {
+            alert(`아이디는 ${foundId} 입니다`);
+        }
+        if (message) {
+            alert(message);
+        }
+    }
+    const button2 = document.getElementById("button2");
 </script>
 </body>
 </html>

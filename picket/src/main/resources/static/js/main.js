@@ -44,3 +44,25 @@ function autoSlide() {
 
 // 일정 시간 간격으로 자동 슬라이드 넘김 설정 (일정한 간격으로 슬라이드 변경)
 let autoSlideInterval = setInterval(autoSlide, slideDuration);
+
+
+
+/*테스트*/
+
+let test = document.querySelector('.test');
+let video = document.querySelector('video');
+
+window.addEventListener('scroll', function() {
+  let divPosition = window.scrollY;
+
+  let testHeight = test.clientHeight * 2;
+  let videoHeight = (video.clientHeight /100) * 90;
+
+
+  // 스크롤 위치에 따른 투명도 계산
+  let opacity = divPosition / testHeight;
+  let videoOpacity = divPosition / videoHeight;
+
+  test.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+  video.style.opacity = `${1-videoOpacity}`;
+});

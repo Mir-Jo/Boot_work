@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/font.css">
-    <title>Picket-새소식창</title>
+    <title>Picket로그인</title>
 </head>
 
 <body>
@@ -27,12 +27,31 @@
                   <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div> -->
                 <span>사용자 정보를 입력해 주세요</span>
-                <input type="text" name="id" placeholder="아이디" required/>
-                <input type="password" name="pass" placeholder="비밀번호(특수문자,숫자를 포함한 8~15자)" pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,15}$/" required/>
-                <input type="email" name="email" placeholder="이메일" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/" required/>
-                <input type="text" name="name" placeholder="이름" required/>
-                <input type="text" name="birthdate" placeholder="생년월일 6자리 예)00/01/01" required/>
-                <input type="tel" name="tel" placeholder="전화번호 예)010-1234-5678" pattern="/^(010|011|016|017|018|019)-\d{3,4}-\d{4}$/u" required/>
+                <input type="text" name="id"
+                       placeholder="아이디(알파벳, 숫자 최대 20자)"
+                       pattern="^[a-zA-Z0-9]+$"
+                       required/>
+                <input type="password" name="pass"
+                       placeholder="비밀번호(특수문자,숫자를 포함한 8~15자)"
+                       pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d@$!%*?&]{8,15}$"
+                       required/>
+
+                <input type="email" name="email"
+                       placeholder="이메일"
+                       pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/"
+                       required/>
+
+                <input type="text" name="name"
+                       placeholder="이름(최대 15자)" required/>
+
+                <input type="text" name="birthdate"
+                       placeholder="생년월일 6자 예)00/01/01"
+                       pattern="^(?:[0-9]{2})\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[1-2][0-9]|3[0-1])$"
+                       required/>
+
+                <input type="tel" name="tel"
+                       placeholder="전화번호 예)010-1234-5678"
+                       pattern="^01[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}$" required/>
                 <!-- <label><input type="radio">여성</label><label><input type="radio"> 남성</label> -->
 
                 <button type="submit">회원 가입</button>
@@ -73,10 +92,10 @@
                 </div>
                 <script>
                     window.onload = function() {
-                    var message = "{{#message}}{{message}}{{/message}}";
-                    if(message) {
-                        alert(message);
-                    }
+                      var message = "{{#message}}{{message}}{{/message}}";
+                        if(message) {
+                          alert(message);
+                        }
                     }
                 </script>
             </div>
