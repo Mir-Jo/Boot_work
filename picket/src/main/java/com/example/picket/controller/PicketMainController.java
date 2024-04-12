@@ -53,36 +53,10 @@ public class PicketMainController {
         rttr.addFlashAttribute("message", "가입이 완료되었습니다.");
         return "redirect:/loginpage";
     }
-    /*회원가입 중 오류발생 */
-    @PostMapping("/signupError-duplicatedId")
-    public String duplicatedIdError(RedirectAttributes rttr){
-        rttr.addFlashAttribute("message","이미 사용중인 ID입니다!");
-        return "redirect:/loginpage";
-    }
-    @PostMapping("/signupError-invalidId")
-    public String invalidIdError(RedirectAttributes rttr){
-        rttr.addFlashAttribute("message", "유효하지 않은 ID입니다!");
-        return "redirect:/loginpage";
-    }
-    @PostMapping("/signupError-invalidName")
-    public String invalidNameError(RedirectAttributes rttr){
-        rttr.addFlashAttribute("findIdError", "유효하지 않은 이름입니다!");
-        return "redirect:/loginpage";
-    }
-    /*ID찾은 후 FindIDPW로 이동*/
-    @PostMapping("/FindIDPW-IdFound")
-    public String idFound(HttpSession session, RedirectAttributes rttr){
-        String foundId = (String)session.getAttribute("foundId");
-        if(foundId != null ) {
-            rttr.addFlashAttribute("foundId", foundId);
-        }
-        return "redirect:/FindIDPW";
-    }
-
     /* 카테고리별 작품목록으로 이동 */
     @GetMapping("/concertlist")
     public String concertList() {return "/category/ConcertList";}
-    @GetMapping("musicallist")
+    @GetMapping("/musicallist")
     public String musicalList() {return "/category/MusicalList";}
     @GetMapping("/actlist")
     public String actList() {return "/category/ActList";}

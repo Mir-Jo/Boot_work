@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/FindIDPW.css">
     <link rel="stylesheet" href="/css/font.css">
-    <title>Picket-새소식창</title>
+    <title>Id, PW 찾기</title>
 </head>
 <body>
 <header>
@@ -26,13 +26,14 @@
                   <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div> -->
                 <span>사용자 정보를 입력해 주세요</span>
-                <input type="text" placeholder="아이디" >
-                <input type="email" placeholder="이메일" >
-                <input type="text" placeholder="이름" >
+                <input type="text" placeholder="이름" name="name">
+                <input type="text" placeholder="전화번호"
+                       pattern="^01[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}$" name="tel">
+                <input type="text" placeholder="아이디" name="id">
                 <a href="/loginpage">로그인 하시겠어요?</a>
                 <!-- <label><input type="radio">여성</label><label><input type="radio"> 남성</label> -->
 
-                <button id="button2">조 회</button>
+                <button id="button2" type="submit">조 회</button>
             </form>
         </div>
         <!-- 로그인 창 -->
@@ -75,17 +76,21 @@
 </script>
 <script>
     const button1 = document.getElementById("button1");
+    const button2 = document.getElementById("button2");
     window.onload = function() {
-        var foundId = "{{#foundId}}{{foundId}}{{/foundId}}";
-        var message = "{{#findIdError}}{{findIdError}}{{/findIdError}}";
+            var foundId = "{{#foundId}}{{foundId}}{{/foundId}}";
+            var foundPass ="{{#foundPass}}{{foundPass}}{{/foundPass}}";
+            var message = "{{#findIdError}}{{findIdError}}{{/findIdError}}"+"{{#findPWError}}{{findPWError}}{{/findPWError}}";
         if (foundId) {
-            alert(`아이디는 ${foundId} 입니다`);
+            alert(`아이디는 ${foundId} 입니다.`);
+        }
+         if (foundPass) {
+            alert("비밀번호는"+foundPass+"입니다.");
         }
         if (message) {
             alert(message);
         }
     }
-    const button2 = document.getElementById("button2");
 </script>
 </body>
 </html>

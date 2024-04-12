@@ -26,16 +26,20 @@ public class CustomerController {
 
     /* 회원가입 정보를 전달*/
     @PostMapping("/signup")
-    public String createUser(CustomerForm form) {
+    public String createUser(CustomerForm form, RedirectAttributes rttr) {
         String userId = form.getId();
         String username = form.getName();
         Customer idCheck = customerRepository.findById(userId);
+        /* 회원가입중 예외처리 */
         if (idCheck != null) {
-            return "/signupError-duplicatedId";
+            rttr.addFlashAttribute("message","이미 사용중인 ID입니다!");
+            return "redirect:/loginpage";
         } else if (userId.length() > 20) {
-            return "/signupError-invalidId";
+            rttr.addFlashAttribute("message", "유효하지 않은 ID입니다!");
+            return "redirect:/loginpage";
         } else if (username.trim().isEmpty() || username.length() > 15) {
-            return "/signupError-invalidName";
+            rttr.addFlashAttribute("message", "유효하지 않은 이름입니다!");
+            return "redirect:/loginpage";
         }
         Customer customer = form.toEntity();
         Customer saved = customerRepository.save(customer);
@@ -47,7 +51,7 @@ public class CustomerController {
 
     /* 아이디 찾기 */
     @PostMapping("/findId")
-    public String findId(String name, String tel, HttpSession session, RedirectAttributes rttr) {
+    public String findId(String name, String tel, RedirectAttributes rttr) {
         List<Customer> checkName = customerRepository.findByName(name);
         Customer checkTel = customerRepository.findByTel(tel);
 
@@ -55,8 +59,8 @@ public class CustomerController {
             for (Customer customer : checkName) {
                 if (customer.getId().equals(checkTel.getId())) {
                     String foundId = checkTel.getId();
-                    session.setAttribute("foundId", foundId);
-                    return "/FindIDPW-IdFound";
+                    rttr.addFlashAttribute("foundId", foundId);
+                    return "redirect:/FindIDPW";
                 }
             }
             rttr.addFlashAttribute("findIdError", "이름과 전화번호가 일치하지 않습니다.");
@@ -68,8 +72,31 @@ public class CustomerController {
             rttr.addFlashAttribute("findIdError", "이름에 해당하는 ID가 존재하지 않습니다.");
             return "redirect:/FindIDPW";
         } else {
-            rttr.addFlashAttribute("message", "ID가 존재하지 않습니다.");
+            rttr.addFlashAttribute("findIdError", "ID가 존재하지 않습니다.");
             return "redirect:/FindIDPW";
         }
+    }
+
+    /* 비밀번호 찾기 */
+    @PostMapping("/findPass")
+    public String findPass(String name, String tel, String id,RedirectAttributes rttr){
+        List<Customer> checkName = customerRepository.findByName(name);
+        Customer checkTel = customerRepository.findByTel(tel);
+        Customer checkId = customerRepository.findById(id);
+        if(checkId != null && checkTel != null && checkName != null){
+            if(checkId.getPass().equals(checkTel.getPass())){
+                String foundPass = checkTel.getPass();
+                rttr.addFlashAttribute("foundPass", foundPass);
+                return "redirect:/FindIDPW";
+            }
+        } else if(checkId == null){
+            rttr.addFlashAttribute("findPWError",
+                    "입력하신 정보로 등록된 계정이 없습니다. 회원가입을 진행해주세요.");
+            return "redirect:/FindIDPW";
+        } else {
+        rttr.addFlashAttribute("findPWError",
+                "입력하신 정보로 등록된 계정을 찾을 수 없습니다. 다시 시도해주세요.");
+        }
+        return "redirect:/FindIDPW";
     }
 }
