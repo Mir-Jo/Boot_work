@@ -13,21 +13,22 @@ import lombok.ToString;
 @Getter
 public class Customer {
     @Id
+    @Column(name = "id")
     private String id;
-    @Column
+    @Column(name = "pw", nullable=false)
     private String pass;
-    @Column
+    @Column(name = "email", nullable = false)
     private String email;
-    @Column
+    @Column(name= "name", nullable = false)
     private String name;
-    @Column
+    @Column(name = "birthdate", nullable = false)
     private String birthdate;
-    @Column
+    @Column(name="tel", unique = true, nullable = false)
     private String tel;
-    @Column
+    @Column(name="card")
     private Long card;
-    @Column
+    @Column(name = "balance")
     private Long balance;
-    @Column
+    @Column(name = "point")
     private Long point;
 }

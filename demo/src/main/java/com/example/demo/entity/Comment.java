@@ -8,14 +8,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
+@Entity(name = "datgul")
 @Getter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class Comment {
     @Id //대표키 지정
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //DB가 자동으로 1씩 증가
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comment_sq")
+    @SequenceGenerator(name="comment_sq", sequenceName = "comment_id_sq", initialValue = 1, allocationSize = 1)//DB가 자동으로 1씩 증가
     private Long id; //대표키
     @ManyToOne //Content 엔티티와  Article 엔티티를 다대일 관계로 설정
     @JoinColumn(name="article_id") //외래키 생성, Article 엔티티의 기본키(id)와 매핑

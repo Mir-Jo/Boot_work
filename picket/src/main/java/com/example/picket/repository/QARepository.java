@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.ArrayList;
 
 
-public interface QARepository extends CrudRepository<QA, Long> {
+public interface QARepository extends CrudRepository<QA, String> {
     @Override
     ArrayList<QA> findAll();
 }

@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.net.http.HttpRequest;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Controller
@@ -29,7 +30,7 @@ public class CustomerController {
     public String createUser(CustomerForm form, RedirectAttributes rttr) {
         String userId = form.getId();
         String username = form.getName();
-        Customer idCheck = customerRepository.findById(userId);
+        Customer idCheck = customerRepository.findById(userId).orElse(null);
         /* 회원가입중 예외처리 */
         if (idCheck != null) {
             rttr.addFlashAttribute("message","이미 사용중인 ID입니다!");
@@ -82,7 +83,7 @@ public class CustomerController {
     public String findPass(String name, String tel, String id,RedirectAttributes rttr){
         List<Customer> checkName = customerRepository.findByName(name);
         Customer checkTel = customerRepository.findByTel(tel);
-        Customer checkId = customerRepository.findById(id);
+        Customer checkId = customerRepository.findById(id).orElse(null);
         if(checkId != null && checkTel != null && checkName != null){
             if(checkId.getPass().equals(checkTel.getPass())){
                 String foundPass = checkTel.getPass();

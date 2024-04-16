@@ -12,17 +12,18 @@ import lombok.ToString;
 @Getter
 @ToString
 public class QA {
-    @Id
+    @Column(name = "qaId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long qaId;
-    @Column
+    @Column(name="category", nullable = false)
     private Long category;
-    @Column
+    @Column(name="name", nullable = false)
     private String name;
-    @Column
+    @Column(name="tel", nullable = false)
     private String tel;
-    @Column
+    @Id
+    @Column(name="title")
     private String title;
-    @Column
-    private String content;
+    @Column(name = "comment", nullable = false)
+    private String comment;
 }
