@@ -8,12 +8,16 @@ spring:
 
 #테이블 생성 후에 data.sql 실행
     defer-datasource-initialization: true
-
-    spring:
-      datasource:
-        url: jdbc:oracle:thin:@127.0.0.1:1521/XE
-        driver-class-name: oracle.jdbc.driver.OracleDriver
-        username: scott
-        password: tiger
-    server:
-      port: 8080
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+#    spring:
+#      datasource:
+#        url: jdbc:oracle:thin:@127.0.0.1:1521/XE
+#        driver-class-name: oracle.jdbc.driver.OracleDriver
+#        username: scott
+#        password: tiger
+#    server:
+#      port: 8080

@@ -67,5 +67,5 @@ public class PicketMainController {
 
     /* 1:1문의 등록으로 이동 */
     @GetMapping("/QAWrite")
-    public String gotoQAWrite(){ return "/support/QA_Write"; }
+    public String qaWrite(){ return "/support/QA_Write"; }
 }

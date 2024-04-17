@@ -17,3 +17,7 @@ document.getElementById('QA_title').addEventListener('keyup', function() {
     alert("제목은 최대 50자까지만 입력할 수 있습니다.")
   }
 })
+function goBack(){
+  window.history.back();
+}
+document.getElementById('QA_cancel').addEventListener('click', goBack);

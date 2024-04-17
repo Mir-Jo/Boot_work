@@ -35,7 +35,7 @@
         <br><br>
         <form action="/newQA" method="post">
         <h5>문의하실 유형을 선택해주세요.</h5><br>
-        <select id="QA_type" name="QA_type">
+        <select id="QA_type" name="category">
             <option name="유형1" id="유형1">유형1</option>
             <option name="유형2" id="유형2">유형2</option>
             <option name="유형3" id="유형3">유형3</option>
@@ -49,10 +49,10 @@
         <input type="tel" pattern="^01[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}$"
                placeholder="예)010-1234-5678" name="tel" id="tel">
         <hr>
-        <h5>문의 제목</h5><br><input type="text" name="QA_title"
+        <h5>문의 제목</h5><br><input type="text" name="title"
                maxlength="50" id="QA_title" placeholder="여기에 제목을 입력해주세요.(최대 50자)">
         <br>
-        <h5>문의 내용</h5><br><textarea name="QA_comment" id="QA_comment"
+        <h5>문의 내용</h5><br><textarea name="comment" id="QA_comment"
                                     style="width:100%"
                                     maxlength="1000"
                                     placeholder="여기에 내용을 입력해주세요(최대 1000자)"></textarea>
@@ -64,12 +64,21 @@
                 상세하게 작성이 되지 않을 시 원하는 답을 얻지 못할 수 있습니다.<br>
                 *부적절한 내용 기재시 사이트 이용이 제한 될 수 있습니다.<br>*첨부파일의 최대 용량은 40MB, 최대 해상도는 3840 X 2160입니다.</h6>
         </div>
+    <div id="buttons">
+        <button id="QA_submit" type="submit">문의 등록</button>
+        <button id="QA_cancel" type="button">취소</button>
+    </div>
     </form>
     </div>
-    <div id="buttons">
-        <a href="/QAList"><span id="QA_submit">문의 등록</span></a>
-        <a href="/support"><span id="QA_cancel">취소</span></a>
-    </div>
+    <script>
+      window.onload = function() {
+        var message = "{{#QAError}}{{QAError}}{{/QAError}}";
+            if(message){
+                alert(message);
+                message = null;
+            }
+      }
+    </script>
 </main>
 <footer>
 </footer>

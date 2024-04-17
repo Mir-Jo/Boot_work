@@ -16,7 +16,7 @@ public class QA {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long qaId;
     @Column(name="category", nullable = false)
-    private Long category;
+    private String category;
     @Column(name="name", nullable = false)
     private String name;
     @Column(name="tel", nullable = false)
