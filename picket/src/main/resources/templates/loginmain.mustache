@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/font.css">
     <title>Picket</title>
@@ -13,7 +14,7 @@
 <!-- 헤더 -->
 <header>
     <nav id="nav1">
-        <a href="/main"><img id="logo" src="/image/icon/로고.png" width="55%" ></a>
+        <a href="/loginmain"><img id="logo" src="/image/icon/로고.png" width="55%" ></a>
         <ul>
             <li><a href="/concertlist">콘서트</a></li>
             <li><a href="/musicallist">뮤지컬</a></li>
@@ -26,7 +27,7 @@
     <div>
         <a href="/mypagemain"><img id="my" src="/image/icon/마이페이지.png" width="50" padding="10 0 0 0"></a>
         <a href="/support"><img id="callcenter" src="/image/icon/물음표.png" width="45" padding="10 0 0 0"></a>
-        <a href="/main"><img id="login" src="/image/icon/로그아웃.png" width="45"></a>
+        <a href="/logout"><img id="login" src="/image/icon/로그아웃.png" width="45"></a>
 
     </div>
 </header>
@@ -34,31 +35,53 @@
 <!-- 메인 카테고리 -->
 <main>
     <div id="indexv">
-        <video src="/홈피수정.mp4" autoplay muted loop  width=" 100%" height= "100%"></video>
+        <video src="../홈피수정.mp4" autoplay muted loop  width=" 100%" height= "100%"></video>
     </div>
-    <div id="indexf">
-        <div>
-            <div class="text1">카테고리</div>
+
+    <div class="test">
+
+
+        <div class="blank"></div>
+        <div id="indexf">
+            <div>
+                <div class="text1">카테고리</div>
+            </div>
+            <div class="iconbox">
+                <div class="icon">
+                    <a href="/musicallist">
+                        <img src="/image/icon/뮤지컬1.png"><br>
+                        <p id="icontext">뮤지컬</p>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="/actlist">
+                        <img src="/image/icon/극장1.png"><br>
+                        <p id="icontext">연극</p>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="/exhibitlist">
+                        <img src="/image/icon/전시회1.png"><br>
+                        <p id="icontext">전시회</p>
+                    </a>
+                </div>
+            </div>
+            <div class="iconbox">
+                <div class="icon">
+                    <a href="/concertlist">
+                        <img src="/image/icon/콘서트1.png"><br>
+                        <p id="icontext">콘서트</p>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="/classiclist">
+                        <img src="/image/icon/피아노1.png"><br>
+                        <p id="icontext">클래식</p>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="iconbox">
-            <div class="icon"><a href="/musicallist"><img src="/image/icon/뮤지컬1.png"><br>
-                <p id="icontext">뮤지컬</p>
-            </a></div>
-            <div class="icon"><a href="/actlist"><img src="/image/icon/극장1.png"><br>
-                <p id="icontext">연극</p>
-            </a></div>
-            <div class="icon"><a href="/exhibitlist"><img src="/image/icon/전시회1.png"><br>
-                <p id="icontext">전시회</p>
-            </a></div>
-        </div>
-        <div class="iconbox">
-            <div class="icon"><a href="/concertlist"><img src="/image/icon/콘서트1.png"><br>
-                <p id="icontext">콘서트</p>
-            </a></div>
-            <div class="icon"><a href="/classiclist"><img src="/image/icon/피아노1.png"><br>
-                <p id="icontext">클래식</p>
-            </a></div>
-        </div></div>
+    </div>
 
     <!--  큰 슬라이드 캐러셀 -->
     <div id="pic">
@@ -160,6 +183,14 @@
         </div>
     </div>
 </footer>
+<script>
+    window.onload = function() {
+                      var message = "{{#logined}}{{logined}}{{/logined}}";
+                        if(message) {
+                          alert(message);
+                        }
+                    }
+</script>
 <script src="/js/main.js"></script>
 
 </body>

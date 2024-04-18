@@ -19,6 +19,7 @@ import java.util.Optional;
 @Slf4j
 @Controller
 public class CustomerController {
+
     /* 변수 선언 컨테이너 */
     @Autowired
     private CustomerRepository customerRepository;
@@ -29,8 +30,10 @@ public class CustomerController {
     @PostMapping("/signup")
     public String createUser(CustomerForm form, RedirectAttributes rttr) {
         String userId = form.getId();
-        String username = form.getName();
+        String userName = form.getName();
+        String userTel = form.getTel();
         Customer idCheck = customerRepository.findById(userId).orElse(null);
+        Customer telCheck = customerRepository.findByTel(userTel);
         /* 회원가입중 예외처리 */
         if (idCheck != null) {
             rttr.addFlashAttribute("message","이미 사용중인 ID입니다!");
@@ -38,8 +41,11 @@ public class CustomerController {
         } else if (userId.length() > 20) {
             rttr.addFlashAttribute("message", "유효하지 않은 ID입니다!");
             return "redirect:/loginpage";
-        } else if (username.trim().isEmpty() || username.length() > 15) {
+        } else if (userName.trim().isEmpty() || userName.length() > 15) {
             rttr.addFlashAttribute("message", "유효하지 않은 이름입니다!");
+            return "redirect:/loginpage";
+        } else if(telCheck != null)  {
+            rttr.addFlashAttribute("message", "이미 사용중인 전화번호입니다!");
             return "redirect:/loginpage";
         }
         Customer customer = form.toEntity();

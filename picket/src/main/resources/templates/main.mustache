@@ -183,7 +183,16 @@
         </div>
     </div>
 </footer>
-<script src="/js/main.js"></script>
+<script>
+    window.onload = function() {
+    var message = "{{#logoutSuccess}}{{logoutSuccess}}{{/logoutSuccess}}";
+        if(message){
+            alert(message);
+        }
+    }
+</script>
+<script src="/js/main.js">
+</script>
 
 </body>
 

@@ -1,16 +1,18 @@
 package com.example.picket.controller;
 
+import jakarta.servlet.http.HttpServletRequestWrapper;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Slf4j
 @Controller
 public class PicketMainController {
+
+    private HttpServletRequestWrapper request;
     //===================================================================
     /* 링크 이동 컨테이너 */
 
@@ -52,6 +54,16 @@ public class PicketMainController {
     public String signupMainAfterSign(RedirectAttributes rttr) {
         rttr.addFlashAttribute("message", "가입이 완료되었습니다.");
         return "redirect:/loginpage";
+    }
+    /* 로그아웃 */
+    @GetMapping("/logout")
+    public String logout(RedirectAttributes rttr, HttpSession session){
+        if(session != null){
+
+        session.invalidate();
+        rttr.addFlashAttribute("logoutSuccess","로그아웃 되었습니다.");
+        }
+        return "redirect:/main";
     }
     /* 카테고리별 작품목록으로 이동 */
     @GetMapping("/concertlist")
