@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{padding:0;margin:0}
   ul,ol{list-style:none}
   a{text-decoration:none;color:#fff;}
@@ -7,12 +8,19 @@
     position: relative;
     text-align: center;
   }
+=======
 
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
+
+  button{
+    cursor: pointer;
+  }
   .top-main-bg{
     background-color:#000000;
   }
 
 
+<<<<<<< HEAD
   #nav1_text{
     font-size:15px;
   }
@@ -86,7 +94,35 @@ main{
   text-align:center;
   border-top:1px solid black;
   border-bottom:1px solid black;
+=======
+
+/* 네이게이션 끝 */
+
+main{
+
+  background-color:rgb(238, 245, 253);
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
 }
+
+/* 제목 */
+.mypagemain_titlename h2{
+  margin: 1px 35% 0%;
+
+
+  padding:2% 0;
+
+  text-align: center;
+
+  border:5px solid rgb(129, 131, 224);
+  border-radius:25%;
+}
+
+/* 포인트 제목 아래 마진 */
+.scroll4{
+  margin-bottom:29.594px;
+}
+
+/* 구분선 */
 .underline{
   width:59%;
   margin:auto;
@@ -106,23 +142,24 @@ main{
     float: left;
     clear: left;
   }
- 
-  #mypagemain_expand-menu { /* 체크박스 폼 요소 감춤 */
+
+  #mypagemain_expand-menu {
     display: none;
   }
-  #mypagemain_expand-menu:checked ~ ul { /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+  #mypagemain_expand-menu:checked ~ ul {
     display: block;
     height: auto;
   }
   .mypagemain_menu {
     display: block;
-    width:150px;
-    background-color: #000;
-    color: #fff;  
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
-    margin-top:0%;
-    margin-bottom:50%;
+    width:180px;
+    height: 300px ;
+    background-color: rgb(129, 131, 224);
+    margin-top: 5%;
+    color: #fff;
+    border-radius: 10%;
+    /* border-bottom-right-radius: 10%; */
+
     padding: 0%;
     box-sizing: border-box;
     position:fixed;
@@ -141,46 +178,145 @@ main{
     text-decoration: none;
   }
   .mypagemain_menu ul li:hover, .mypagemain_menu > label:hover, .mypagemain_menu a:hover {
-    color: #5a4949;
-  
+    color: #292470;
+
   }
-  
+
   .mypagemain_menu div {
+    font-family: 'wind';
+    font-weight: 800;
     left: 50px;
-    line-height: 1.5;
-    font-size: 1em;
+    line-height: 3.5;
+    font-size: 20px;
     font-family: 'Noto Sans KR';
     padding:0 0 0 20px;
-     /* 패딩 20p로 축소 */
+  }
+/* 사이드바 끝 */
+
+/* 테이블 박스 */
+  .mypagemain_listmain{
+    flex:1;
+    display:flex;
+    justify-content: center;
+  }
+  .mypagemain_listmain > table{
+
+    border-collapse: collapse;
+    text-align:center;
+
+    width:60%;
+    height:100%;
+
+  }
+  .mypagemain_tablehead , .mypagemain_tablebody {
+    border-bottom:2px solid rgb(129, 131, 224);
+    font-weight: bold;
+  }
+  .mypagemain_listmain td{
+    padding:2% 3%;
+  }
+  .mypagemain_checkbox_width{
+    padding:1% 3%;
+  }
+  .mypagemain_tablehead{
+    background-color:rgb(129, 131, 224); opacity: 0.8;
+    padding:20px;
+    color:white;
+    font-size:18px;
+  }
+
+
+  .mypagemain_ticketnum button{
+    width:20%;
+
+  }
+  .mypagemain_spacetable{
+    border-bottom:0px;
+    padding-bottom:7%;
+  }
+  .mypagemain_pageleft, .mypagemain_pageright{
+    padding:5px 10px;
+  }
+
+  .mypagemain_pagenum{
+   text-align:center;
+  }
+  .mypagemain_tablesum{
+
+    background-color:rgba(90, 91, 92, 0.774); opacity: 0.8;
+  }
+
+  .mypagemain_tablebutton{
+    text-align:right;
+
+  }
+
+  .mypagemain_buttons{
+    padding:10px 20px;
+    border-radius:20%;
+    border:0;
+    background-color:rgb(129, 131, 224);
+    text-align:right;
+    color:#fff;
+  }
+  .mypagemain_buttons:hover{
+    background-color:rgb(69, 72, 209);
+    color:#000000;
+  }
+  .mypagemain_select_tr{
+    background-color:rgb(238, 245, 253);
+
+  }
+
+  .mypagemain_select_th div{
+    padding:2%;
+    text-align:left;
+  }
+
+
+  .mypagemain_tablehead{
+    background-color:rgb(129, 131, 224); opacity: 0.8;
+    padding:20px;
+    color:white;
+    font-size:18px;
   }
   .mypa{
     display:flex;
     justify-content: center;
   }
   .mypageplace{
+<<<<<<< HEAD
     background-color:rgb(129, 131, 224);
     width:60%;
     height:250px;
+=======
+    background: rgb(0,41,250);
+    background: radial-gradient(circle, rgba(0,41,250,0.8239670868347339) 24%, rgba(42,45,44,0.8687850140056023) 74%);
+    margin-top:30px;
+    width:100%;
+    height:200px;
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
     display:flex;
-    font-size:35px;
-    justify-content: space-between;
+    font-size:20px;
+    justify-content: unset;
   }
   .mypageimgtext{
     display:flex;
-    padding-left:50px;
-    
+    margin-left:420px;
+
     align-items: center;
     width:30%;
   }
   #userimage{
     background-color:rgb(87, 118, 153);
     width:80%;
-    
+
   }
   .mypagelist{
     display:flex;
     font-size:25px;
     align-items:center;
+
   }
   .mypagelist_right_border{
     border-right:2px solid #ffffff;
@@ -194,70 +330,33 @@ main{
   .mypagelist_count{
     font-size:15px;
   }
+
   #userimage > img{
     border-radius: 50%;
     width:80%;
-    
+
   }
   .usernicknamebox{
     width:300px;
-    
+
   }
   .usernickname{
-    font-size:50px;
+    font-family: 'wind';
+    font-weight:800;
+    font-size:60px  ;
   }
   .mypagekind{
     display:flex;
     justify-content: center;
     align-items: center;
-    
+
   }
-  
+
 
 
 
   /* 푸터 */
-  footer{
-  
-    background-color:#9e9c9c;
-    
-  }
-  
-  .footercontainer1{
-    display:flex;
-  }
-  #topc1{
-    justify-content: flex-start;
-  }
-  .rlxk{
-    margin:20px 15px;
-    
-  }
-  .footerLogo{
-    display:flex;
-  }
-  .footerLogo > img{
-    width:11%;
-    height:100%;
-    
-  }
-  .Logotext{
-    padding:15px 0 0 20px;
-  
-    
-  }
-  .footercontainer2{
-    display:flex;
-  }
-  .footercontainer2 > div{
-    margin:10px 5px;
-  }
-  #fc2first{
-    padding-left:10px;
-  }
-  #topc2{
-    justify-content: flex-start;
-  }
+
 
 
 

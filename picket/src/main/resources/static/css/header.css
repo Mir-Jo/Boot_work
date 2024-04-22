@@ -9,8 +9,8 @@ header{
 }
 
 /* 메인 홈 페이지 헤더 */
-ul,ol{list-style:none}
-a{text-decoration:none;color:#fff;font-size:20px}
+header ul, header ol{list-style:none}
+header a{text-decoration:none;color:#fff;font-size:20px}
 nav{width:100%;overflow:hidden;height:70px;background-color:#000000; }
 #nav1 {
   width: 100%;

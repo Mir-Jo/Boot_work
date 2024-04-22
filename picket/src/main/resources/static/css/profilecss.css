@@ -1,4 +1,5 @@
 *{padding:0;margin:0}
+<<<<<<< HEAD
   ul,ol{list-style:none}
   a{text-decoration:none;color:#fff;}
   nav{width:80%;overflow:hidden;height:80px;background-color:#000000;margin:0px auto}
@@ -7,12 +8,15 @@
     position: relative;
     text-align: center;
   }
+=======
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
 
   .top-main-bg{
     background-color:#000000;
   }
 
 
+<<<<<<< HEAD
   #nav1_text{
     font-size:15px;
   }
@@ -54,184 +58,87 @@
 
 
 /* 찜목록 */
+=======
+
+
+
+
+
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
 main{
-  
+
   background-color: #eef5FD;
 }
 
 .profile_titlename h2{
-  
+
   padding:2% 0;
   text-align:center;
   border-top:1px solid black;
-  border-bottom:2px dotted rgb(195, 201, 209);
-}
-/*
-.profile_asta{
-  display:flex;
-  justify-content: space-between;
-}
 
-
-  .profile_menu ::before{
-    font-family: 'Material Icons';
-    font-size: 1.5em;
-    float: left;
-    clear: left;
+}
+  .profile_asta{
+    padding-bottom:30px;
   }
- 
-  #profile_expand-menu { 
-    display: none;
-  }
-  #profile_expand-menu:checked ~ ul { 
-    display: block;
-    height: auto;
-  }
-  .profile_menu {
-    display: block;
-    width:150px;
-    background-color: #000;
-    color: #fff;  
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
-    margin-top:0%;
-    margin-bottom:50%;
-    padding: 0%;
-    box-sizing: border-box;
-    position:fixed;
-  }
-  .profile_menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .profile_menu a, .menu > label {
-    display: block;
-    height: 25px;
-    padding: 8px;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
-  }
-  .profile_menu ul li:hover, .profile_menu > label:hover, .profile_menu a:hover {
-    color: #5a4949;
-  
-  }
-  
-  .profile_menu div {
-    left: 50px;
-    line-height: 1.5;
-    font-size: 1em;
-    font-family: 'Noto Sans KR';
-    padding:0 0 0 20px;
-     
-  }*/
   .profile_tablemain{
-    flex:1;
     display:flex;
     justify-content: center;
     margin-top: 20px;
- 
+
+
   }
   .profile_tablemain > table{
-   
-    border-collapse: collapse;
 
+    border-collapse: collapse;
+    border: 4px solid black;
     width:60%;
     height:100%;
   }
-  
+
   .profile_table_td, .profile_solid_tr th{
     border:1px solid #000;
   }
   .profile_table_td{
     padding:3%;
     background-color:#fff;
-    
+
   }
   .profile_table_space_td{
     padding:3%;
   }
   .profile_tablemain th{
-    
+
     width:15%;
     color:white;
     background-color:rgb(129, 131, 224);
-    
+
     text-align:center;
   }
   .profile_spacetable td{
     background-color:rgb(255, 255, 255);
   }
   .profile_button1 {
-    text-align:right;
-    
+    display:flex;
+    justify-content: right;
+    margin:30px 400px;
   }
-  .profile_button1 td{
-    background-color:#eef5FD;
-  }
+
   .profile_button1 button{
     padding:10px 20px;
+    margin-right:20px;
     border-radius:20%;
     border:0;
     background-color:rgb(129, 131, 224);
     font-size:14px;
     color:#fff;
     cursor: pointer;
-    
+
+  }
+  .profile_button1 :hover{
+    color:#000;
   }
   .profile_button1 a{
     font-size:14px !important;
-  }
-  
-  
-  /* 찜목록 끝 */
-
-  
-
-
-
-  /* 푸터 */
-  footer{
-  
-    background-color:#fff;
-    
-  }
-  
-  .footercontainer1{
-    display:flex;
-  }
-  #topc1{
-    justify-content: flex-start;
-  }
-  .rlxk{
-    margin:20px 15px;
-    
-  }
-  .footerLogo{
-    display:flex;
-  }
-  .footerLogo > img{
-    width:11%;
-    height:100%;
-    
-  }
-  .Logotext{
-    padding:15px 0 0 20px;
-  
-    
-  }
-  .footercontainer2{
-    display:flex;
-  }
-  .footercontainer2 > div{
-    margin:10px 5px;
-  }
-  #fc2first{
-    padding-left:10px;
-  }
-  #topc2{
-    justify-content: flex-start;
   }
 
 

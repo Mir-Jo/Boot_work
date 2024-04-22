@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/mypagemaincss.css">
     <link rel="stylesheet" type="text/css" href="/css/ticketlistcss.css">
     <link rel="stylesheet" type="text/css" href="/css/wishlistcss.css">
     <link rel="stylesheet" type="text/css" href="/css/couponcss.css">
+=======
+    <link rel="stylesheet" href="/css/header.css">
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
     <link rel="stylesheet" href="/css/font.css">
-    <title>마이페이지</title>
+    <link rel="stylesheet" type="text/css" href="/css/mypagemaincss.css">
+
+    <title>Document</title>
 </head>
 <body>
 <header>
     <nav id="nav1">
+
         <a href="/main"><img id="logo" src="/image/icon/로고.png" width="55%" ></a>
         <ul>
             <li><a href="/concertlist">콘서트</a></li>
@@ -51,12 +58,24 @@
                 <div class="mypagelist_right_border">예매내역<br><span><a href="#scroll2">1</a><span class="mypagelist_count">건</span></span></div>
                 <div class="mypagelist_right_border">찜목록<br><span><a href="#scroll3">1</a><span class="mypagelist_count">건</span></span></div>
                 <div class="mypagelist_right_border">포인트<br><span><a href="#scroll4">1</a><span class="mypagelist_count">건</span></span></div>
-                <div class="mypagelist_last_right_border">문의내역<br><span><a href="/QAList">1</a><span class="mypagelist_count">건</span></span></div>
+                <div class="mypagelist_last_right_border">문의내역<br><span><a href="#scroll5">1</a><span class="mypagelist_count">건</span></span></div>
             </div>
             <div class="mypagekind">
 
             </div>
         </div>
+    </div>
+    <div class="mypagemain_menu">
+
+        <input type="checkbox" id="mypagemain_expand-menu" name="mypagemain_expand-menu">
+        <ul class="list">
+            <li><a href="#scroll1" class="mypagemain_item"><div>메뉴</div></a></li>
+            <li><a href="#scroll2" class="mypagemain_item"><div>예매내역</div></a></li>
+            <li><a href="#scroll3" class="mypagemain_item"><div>찜목록</div></a></li>
+            <li><a href="#scroll4" class="mypagemain_item"><div>포인트</div></a></li>
+            <li><a href="/profile" class="mypagemain_item"><div>회원정보</div></a></li>
+            <li><a href="/QAList" class="mypagemain_item"><div>문의내역</div></a></li>
+        </ul>
     </div>
     <form>
         </div>
@@ -64,28 +83,17 @@
         <div class="underline"></div>
 
         <!--<div class="listbox">-->
-        <div class="scroll2" id="scroll2"><div class="ticketlist_titlename"><h2>예매내역</h2></div></div>
+        <div class="scroll2" id="scroll2"><div class="mypagemain_titlename"><h2>예매내역</h2></div></div>
         <form>
-            <div class="ticketlist_asta">
-                <div class="ticketlist_menu">
+            <div class="mypagemain_asta">
 
-                    <input type="checkbox" id="ticketlist_expand-menu" name="ticketlist_expand-menu">
-                    <ul class="list">
-                        <li><a href="#scroll1" class="ticketlist_item"><div>메뉴</div></a></li>
-                        <li><a href="#scroll2" class="ticketlist_item"><div>예매내역</div></a></li>
-                        <li><a href="#scroll3" class="ticketlist_item"><div>찜목록</div></a></li>
-                        <li><a href="#scroll4" class="ticketlist_item"><div>포인트</div></a></li>
-                        <li><a href="/profile" class="ticketlist_item"><div>회원정보</div></a></li>
-                        <li><a href="/QAList" class="ticketlist_item"><div>문의내역</div></a></li>
-                    </ul>
-                </div>
 
-                <div class="ticketlist_listmain">
+                <div class="mypagemain_listmain">
 
                     <table>
                         <thead>
-                        <tr class="ticketlist_select_tr">
-                            <th colspan="2"class="ticketlist_select_th">
+                        <tr class="mypagemain_select_tr">
+                            <th colspan="2"class="mypagemain_select_th">
                                 <div>카테고리 :
                                     <select>
                                         <option>콘서트</option>
@@ -101,8 +109,9 @@
                             <th></th>
                             <th></th>
                         </tr>
-                        <tr class="ticketlist_tablehead">
-                            <th class="ticketlist_checkbox_width"><input type="checkbox" name="ticketlist_ticket"></th>
+
+                        <tr class="mypagemain_tablehead">
+                            <th class="mypagemain_checkbox_width"><input type="checkbox" name="mypagemain_ticket1" onclick='selectAll1(this)'></th>
                             <th>예매 일자</th>
                             <th>티켓 목록</th>
                             <th>공연 일자</th>
@@ -112,32 +121,32 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="ticketlist_tablebody">
-                            <td><input type="checkbox" name="ticketlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket1"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>2024-04-01</td>
                             <td>1</td>
                             <td>140000</td>
                         </tr>
-                        <tr class="ticketlist_tablebody">
-                            <td><input type="checkbox" name="ticketlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket1"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>2024-04-01</td>
                             <td>1</td>
                             <td>140000</td>
                         </tr>
-                        <tr class="ticketlist_tablebody">
-                            <td><input type="checkbox" name="ticketlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket1"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>2024-04-01</td>
                             <td>1</td>
                             <td>140000</td>
                         </tr>
-                        <tr class="ticketlist_tablebody">
-                            <td><input type="checkbox" name="ticketlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket1"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>2024-04-01</td>
@@ -145,8 +154,8 @@
 
                             <td>140000</td>
                         </tr>
-                        <tr class="ticketlist_tablebody">
-                            <td><input type="checkbox" name="ticketlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket1"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>2024-04-01</td>
@@ -154,18 +163,18 @@
                             <td>140000</td>
                         </tr>
                         <tr>
-                            <td class="ticketlist_spacetable" colspan="6">
-                                <button class="ticketlist_pageleft">&lt</button>
-                                <input class="ticketlist_pagenum" type="text" size="1" value="1"></input>&nbsp;
-                                <button class="ticketlist_pageright">&gt</button>
+                            <td class="mypagemain_spacetable" colspan="6">
+                                <button class="mypagemain_pageleft">&lt</button>
+                                <input class="mypagemain_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                                <button class="mypagemain_pageright">&gt</button>
                             </td>
 
                         </tr>
 
                         <tr>
-                            <td class="ticketlist_tablebutton" colspan="6">
+                            <td class="mypagemain_tablebutton" colspan="6">
 
-                                <button class="ticketlist_buttons">환불하기</button>
+                                <button class="mypagemain_buttons">환불하기</button>
                             </td>
                         </tr>
                         </tbody>
@@ -176,17 +185,17 @@
         </form>
         <div class="underline"></div>
         <!--<div class="listbox">-->
-        <div class="scroll3" id="scroll3"><div class="wishlist_titlename"><h2>찜목록</h2></div></div></div>
+        <div class="scroll3" id="scroll3"><div class="mypagemain_titlename"><h2>찜목록</h2></div></div></div>
         <form>
-            <div class="wishlist_asta">
+            <div class="mypagemain_asta">
 
 
-                <div class="wishlist_listmain">
+                <div class="mypagemain_listmain">
 
                     <table>
                         <thead>
-                        <tr class="wishlist_select_tr">
-                            <th colspan="2"class="wishlist_select_th">
+                        <tr class="mypagemain_select_tr">
+                            <th colspan="2"class="mypagemain_select_th">
                                 <div>카테고리 :
                                     <select>
                                         <option>콘서트</option>
@@ -202,69 +211,62 @@
                             <th></th>
                             <th></th>
                         </tr>
-                        <tr class="wishlist_tablehead">
-                            <th class="wishlist_checkbox_width"><input type="checkbox" name="wishlist_ticket"></th>
+                        <tr class="mypagemain_tablehead">
+                            <th class="mypagemain_checkbox_width"><input type="checkbox" name="mypagemain_ticket2" onclick='selectAll2(this)'></th>
                             <th>공연 일자</th>
                             <th>티켓목록</th>
                             <th>카테고리</th>
-
                             <th>가격</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="wishlist_tablebody">
-                            <td><input type="checkbox" name="wishlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket2"></td>
+                            <td>2024-03-26</td>
+                            <td>뮤지컬 물랑루즈</td>
+                            <td>뮤지컬</td>
+                            <td>40000</td>
+                        </tr>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket2"></td>
+                            <td>2024-03-26</td>
+                            <td>뮤지컬 물랑루즈</td>
+                            <td>뮤지컬</td>
+                            <td>40000</td>
+                        </tr>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket2"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>뮤지컬</td>
 
                             <td>40000</td>
                         </tr>
-                        <tr class="wishlist_tablebody">
-                            <td><input type="checkbox" name="wishlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket2"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>뮤지컬</td>
-
                             <td>40000</td>
                         </tr>
-                        <tr class="wishlist_tablebody">
-                            <td><input type="checkbox" name="wishlist_ticket"></td>
+                        <tr class="mypagemain_tablebody">
+                            <td><input type="checkbox" name="mypagemain_ticket2"></td>
                             <td>2024-03-26</td>
                             <td>뮤지컬 물랑루즈</td>
                             <td>뮤지컬</td>
-
-                            <td>40000</td>
-                        </tr>
-                        <tr class="wishlist_tablebody">
-                            <td><input type="checkbox" name="wishlist_ticket"></td>
-                            <td>2024-03-26</td>
-                            <td>뮤지컬 물랑루즈</td>
-                            <td>뮤지컬</td>
-
-                            <td>40000</td>
-                        </tr>
-                        <tr class="wishlist_tablebody">
-                            <td><input type="checkbox" name="wishlist_ticket"></td>
-                            <td>2024-03-26</td>
-                            <td>뮤지컬 물랑루즈</td>
-                            <td>뮤지컬</td>
-
                             <td>40000</td>
                         </tr>
                         <tr>
-                            <td class="wishlist_spacetable" colspan="6">
-                                <button class="wishlist_pageleft">&lt</button>
-                                <input class="wishlist_pagenum" type="text" size="1" value="1"></input>&nbsp;
-                                <button class="wishlist_pageright">&gt</button>
+                            <td class="mypagemain_spacetable" colspan="6">
+                                <button class="mypagemain_pageleft">&lt</button>
+                                <input class="mypagemain_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                                <button class="mypagemain_pageright">&gt</button>
                             </td>
-
                         </tr>
-
                         <tr>
-                            <td class="wishlist_tablebutton" colspan="6">
+                            <td class="mypagemain_tablebutton" colspan="6">
 
-                                <button class="wishlist_buttons">취소하기</button>
+                                <button class="mypagemain_buttons">취소하기</button>
                             </td>
                         </tr>
                         </tbody>
@@ -273,92 +275,65 @@
             </div>
 
         </form>
-
-        <div class="scroll4" id="scroll4"><div class="coupon_titlename"><h2>포인트</h2></div></div>
+        <div class="underline"></div>
+        <div class="scroll4" id="scroll4"><div class="mypagemain_titlename"><h2>포인트</h2></div></div>
         <form>
-            <div class="coupon_asta">
-                <div class="coupon_menu">
-                    <label for="coupon_expand-menu"><div>메뉴</div></label>
-                    <input type="checkbox" id="coupon_expand-menu" name="coupon_expand-menu">
-                    <ul>
-                        <li><a href="ticketlist.html" class="coupon_item"><div>예매내역</div></a></li>
-                        <li><a href="wishlist.html" class="coupon_item"><div>찜목록</div></a></li>
-                        <li><a href="coupon.html" class="coupon_item"><div>포인트내역</div></a></li>
-                        <li><a href="profile.html" class="coupon_item"><div>회원정보</div></a></li>
-                        <li><a href="/QAList" class="coupon_item"><div>문의내역</div></a></li>
-                    </ul>
-                </div>
+            <div class="mypagemain_asta">
 
-                <div class="coupon_listmain">
+
+                <div class="mypagemain_listmain">
 
                     <table>
                         <thead>
 
-                        <tr class="coupon_tablehead">
-
+                        <tr class="mypagemain_tablehead">
                             <th>포인트명</th>
                             <th>포인트</th>
                             <th>사용기간</th>
-
-
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="coupon_tablebody">
-
+                        <tr class="mypagemain_tablebody">
                             <td>신규회원</td>
                             <td>50000</td>
                             <td>2024-04-01 ~ 2024-04-01</td>
-
                         </tr>
-                        <tr class="coupon_tablebody">
-
+                        <tr class="mypagemain_tablebody">
                             <td>신규회원</td>
                             <td>50000</td>
                             <td>2024-04-01 ~ 2024-04-01</td>
-
                         </tr>
-                        <tr class="coupon_tablebody">
-
+                        <tr class="mypagemain_tablebody">
                             <td>신규회원</td>
                             <td>50000</td>
                             <td>2024-04-01 ~ 2024-04-01</td>
-
                         </tr>
-                        <tr class="coupon_tablebody">
-
+                        <tr class="mypagemain_tablebody">
                             <td>신규회원</td>
                             <td>50000</td>
                             <td>2024-04-01 ~ 2024-04-01</td>
-
                         </tr>
-                        <tr class="coupon_tablebody">
-
+                        <tr class="mypagemain_tablebody">
                             <td>신규회원</td>
                             <td>50000</td>
                             <td>2024-04-01 ~ 2024-04-01</td>
-
                         </tr>
                         <tr>
-                            <td class="coupon_spacetable" colspan="6">
-                                <button class="coupon_pageleft">&lt</button>
-                                <input class="coupon_pagenum" type="text" size="1" value="1"></input>&nbsp;
-                                <button class="coupon_pageright">&gt</button>
+                            <td class="mypagemain_spacetable" colspan="6">
+                                <button class="mypagemain_pageleft">&lt</button>
+                                <input class="mypagemain_pagenum" type="text" size="1" value="1"></input>&nbsp;
+                                <button class="mypagemain_pageright">&gt</button>
                             </td>
-
                         </tr>
-
                         <tr>
-                            <td class="coupon_tablebutton" colspan="6">
-
-                                <button class="coupon_buttons">환불하기</button>
+                            <td class="mypagemain_tablebutton" colspan="6">
+                                <button class="mypagemain_buttons">환불하기</button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </form>
         </div>
         </div>
@@ -383,5 +358,7 @@
         </div>
     </div>
 </footer>
+<script src="/js/mypagemainjs.js"></script>
 </body>
+
 </html>

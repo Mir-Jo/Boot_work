@@ -301,10 +301,16 @@ width: 50%;
 }
 
 
+<<<<<<< HEAD
 
 /*테스트*/
 .test{
   position: relative; 
+=======
+/*테스트*/
+.test{
+  position: relative;
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
@@ -317,9 +323,15 @@ width: 50%;
 }
 
 header{
+<<<<<<< HEAD
   z-index: 100; 
   position: fixed; 
   top: 0; 
+=======
+  z-index: 100;
+  position: fixed;
+  top: 0;
+>>>>>>> 2e80168bbb9aa0ed584762a0f7bc483a8bf1575f
   left: 0;
   width: 100%;
 }

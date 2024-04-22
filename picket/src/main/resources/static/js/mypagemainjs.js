@@ -1,7 +1,16 @@
-$(document).ready(function($){
-  $(".scroll_move").click(function(event){
-    console.log(".scroll_move");
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top},500);
-  });
-});
+function selectAll1(selectAll)  {
+  const checkboxes
+     = document.querySelectorAll('input[name="mypagemain_ticket1"]');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked
+  })
+};
+function selectAll2(selectAll)  {
+  const checkboxes
+     = document.querySelectorAll('input[name="mypagemain_ticket2"]');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked
+  })
+};

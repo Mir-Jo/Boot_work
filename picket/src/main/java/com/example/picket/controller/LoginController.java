@@ -18,24 +18,4 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @PostMapping("/login")
-    public String login(String id, String password, HttpSession session, Model model, RedirectAttributes rttr){
-        if (loginService.authenticate(id, password)){
-            Customer customer = customerRepository.findById(id).orElse(null);
-            String name = customer.getName();
-            session.setAttribute("id",id);
-            setSessionTimeout(session, 30);
-            if(name != null){
-            rttr.addFlashAttribute("logined", name+"님 환영합니다.");
-            }
-            return "redirect:/loginmain";
-    } else{
-        model.addAttribute("error", "잘못된 ID 혹은 비밀번호입니다.");
-        return "/login/login";
-        }
-    }
-    public void setSessionTimeout(HttpSession session, int minutes){
-        int seconds = minutes * 60;
-        session.setMaxInactiveInterval(seconds);
-    }
 }
