@@ -47,16 +47,7 @@ public class PicketMainController {
 
     @GetMapping("/FindIDPW")
     public String findIDPW(){ return "/login/FindIDPW"; }
-    /* 로그아웃 */
-    @GetMapping("/logout")
-    public String logout(RedirectAttributes rttr, HttpSession session){
-        if(session != null){
 
-        session.invalidate();
-        rttr.addFlashAttribute("logoutSuccess","로그아웃 되었습니다.");
-        }
-        return "redirect:/main";
-    }
     /* 카테고리별 작품목록으로 이동 */
     @GetMapping("/concertlist")
     public String concertList() {return "/category/ConcertList";}

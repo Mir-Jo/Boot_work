@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
@@ -41,17 +42,21 @@ public class WebSecurityConfig{
                                 new AntPathRequestMatcher("/QAWrite"),
                                 new AntPathRequestMatcher("/profile"),
                                 new AntPathRequestMatcher("/QAList")
-                        ).authenticated()
+                        ).hasRole("CUSTOMER")
                         .anyRequest().permitAll())
                 .formLogin(formLogin -> formLogin
                         .loginPage("/loginpage")
                         .defaultSuccessUrl("/loginmain")
+                        .successHandler(new SavedRequestAwareAuthenticationSuccessHandler())
                 )
                 .logout(logout -> logout
                         .logoutSuccessUrl("/main")
                         .invalidateHttpSession(true)
                 )
                 .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session -> session
+                        .sessionFixation().migrateSession()
+                        .maximumSessions(1).expiredUrl("/loginpage?expired"))
                 .build();
     }
 

@@ -6,8 +6,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class CustomerViewController {
-    @PostMapping("/login")
-    public String login(){
-        return "/loginmain";
-    }
+
 }

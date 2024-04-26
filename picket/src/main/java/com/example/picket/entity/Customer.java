@@ -6,6 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.security.SecureRandom;
 import java.util.Collection;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
+@Setter
 public class Customer implements UserDetails {
     @Id
     @Column(name = "id")
@@ -54,7 +56,6 @@ public class Customer implements UserDetails {
         private Long card;
         private Long balance;
         private Long point;
-
         public CustomerBuilder card(Long card) {
             this.card = card;
             return this;
@@ -69,14 +70,13 @@ public class Customer implements UserDetails {
             this.point = point;
             return this;
         }
-
         public Customer build() {
             return new Customer(id, pass, email, name, birthdate, tel, card, balance, point);
         }
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("customer"));
+        return List.of(new SimpleGrantedAuthority("ROLE_CUSTOMER"));
     }
     @Override
     public String getUsername() {
